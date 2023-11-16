@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buat kamu ini mah</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fccc;
+            background-image: url(images.jpeg);
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .love-message {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #yesbtn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #nobtn {
+            background-color: brown;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="love-message">
+        <p>I LOVE YOU BUAT KAMU</p>
+    </div>
+    <button class="btn" id="yesbtn">love you too</button>
+    <button class="btn" id="nobtn">tai, kata gua teh</button>
+    <script>
+        const LoveMessage = document.querySelector('.love-message');
+        const yesbutton = document.getElementById('yesbtn');
+        const nobutton = document.getElementById('nobtn');
+
+    yesbutton.addEventListener('click', function() {
+        LoveMessage.innerHTML = "<p>terima kasih, kamu membuat ku sangat bahagia</p>";
+        yesbutton.style.display = 'none';
+        nobutton.style.display = 'none';
+        });
+
+    nobutton.addEventListener('click', function (){
+        LoveMessage.innerHTML = "<p>maaf jika mengganggu, semoga hari mu menyenangkan.</p>"
+        LoveMessage.style.color = 'black';
+        LoveMessage.style.fontsize = '20px';
+        yesbutton.style.position = 'absolute';
+        yesbutton.style.left = Math.random() * 88 + "vw";
+        yesbutton.style.top = Math.random() * 88 + "vh";
+        })
+    </script>
+</body>
+</html>
